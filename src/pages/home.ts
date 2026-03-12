@@ -10,16 +10,16 @@ export function homePage() {
 
   const page = document.createElement("div")
 
-  // HEADER
+
   page.appendChild(header())
 
-  // SUNSET BACKGROUND SECTION
+
   const content = document.createElement("section")
 
   content.className =
   "w-full min-h-[85vh] bg-gradient-to-b from-[#c9890a] to-[#7a2f2f] flex flex-col items-center justify-center px-10"
 
-  // COLOR ROW
+ 
   const row = flexRow()
 
   let currentPalette: string[] = []
@@ -37,7 +37,7 @@ export function homePage() {
     })
   }
 
-  // BUTTONS
+
   const generateBtn = button("Generate")
 
   generateBtn.addEventListener("click", generate)
@@ -54,7 +54,7 @@ export function homePage() {
 
   const btnRow = document.createElement("div")
 
-  btnRow.className = "flex gap-16 mt-16"
+btnRow.className = "flex flex-col sm:flex-row gap-6 sm:gap-16 mt-10 sm:mt-16 w-full sm:w-auto"
 
   btnRow.append(generateBtn, saveBtn)
 

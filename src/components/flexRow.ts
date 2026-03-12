@@ -3,7 +3,7 @@ export function flexRow(){
   const row = document.createElement("div")
 
   row.className =
-  "flex justify-center gap-10 flex-wrap mt-32"
+  "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 mt-12 sm:mt-20 w-full max-w-6xl"
 
   return row
 }

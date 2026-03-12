@@ -13,7 +13,7 @@ export function myPalettesPage() {
 
   const palettes = getPalettes()
 
-  // Safety check so the page never crashes
+
   if (!Array.isArray(palettes)) {
     console.error("Palettes is not an array:", palettes)
     page.appendChild(container)
@@ -23,9 +23,9 @@ export function myPalettesPage() {
   palettes.forEach((palette, index) => {
 
     const row = document.createElement("div")
-    row.className = "flex gap-4 mb-8"
+row.className = "flex flex-wrap gap-3 sm:gap-4 mb-10 items-center"
 
-    // Ensure palette is an array before looping
+ 
     if (Array.isArray(palette)) {
       palette.forEach((color) => {
         row.appendChild(colorCard(color))
@@ -34,7 +34,7 @@ export function myPalettesPage() {
 
     const del = document.createElement("button")
     del.textContent = "Delete"
-    del.className = "btn btn-primary"
+   "px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded w-full sm:w-auto"
 
     del.onclick = () => {
       deletePalette(index)
