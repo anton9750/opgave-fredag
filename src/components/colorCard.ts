@@ -13,7 +13,7 @@ card.className =
 
   <div class="flex gap-4 items-center text-sm">
 
-<span class="text-xs sm:text-sm break-all">${color}</span>
+<span class="text-xl sm:text-2xl font-semibold break-all">${color}</span>
 
     <button class="underline">
       copy
