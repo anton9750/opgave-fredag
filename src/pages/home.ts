@@ -17,7 +17,7 @@ export function homePage() {
   const content = document.createElement("section")
 
   content.className =
-  "w-full min-h-[85vh] bg-gradient-to-b from-[#c9890a] to-[#7a2f2f] flex flex-col items-center justify-center px-10"
+"w-full min-h-[85vh] bg-[#212121] flex flex-col items-center justify-center px-10"
 
  
   const row = flexRow()

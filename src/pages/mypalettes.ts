@@ -5,9 +5,8 @@ import { colorCard } from "../components/colorCard"
 
 export function myPalettesPage() {
 
-  const page = document.createElement("div")
-
-  page.className = "min-h-screen flex flex-col"
+const page = document.createElement("div")
+page.className = "min-h-screen flex flex-col bg-[#212121]"
 
   page.appendChild(header())
 
