@@ -63,6 +63,13 @@ btnRow.className = "flex flex-col sm:flex-row gap-6 sm:gap-16 mt-10 sm:mt-16 w-f
 
   page.appendChild(content)
 
+  page.appendChild(content)
+page.appendChild(footer())
+
+generate()
+
+return page
+
   footer
 
   generate()

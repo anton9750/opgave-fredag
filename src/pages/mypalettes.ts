@@ -1,4 +1,5 @@
 import { header } from "../components/header"
+import { footer } from "../components/footer"
 import { getPalettes, deletePalette } from "../components/palette"
 import { colorCard } from "../components/colorCard"
 
@@ -13,28 +14,20 @@ export function myPalettesPage() {
 
   const palettes = getPalettes()
 
-
-  if (!Array.isArray(palettes)) {
-    console.error("Palettes is not an array:", palettes)
-    page.appendChild(container)
-    return page
-  }
-
   palettes.forEach((palette, index) => {
 
     const row = document.createElement("div")
-row.className = "flex flex-wrap gap-3 sm:gap-4 mb-10 items-center"
+    row.className = "flex flex-wrap gap-3 sm:gap-4 mb-10 items-center"
 
- 
-    if (Array.isArray(palette)) {
-      palette.forEach((color) => {
-        row.appendChild(colorCard(color))
-      })
-    }
+    palette.forEach((color) => {
+      row.appendChild(colorCard(color))
+    })
 
     const del = document.createElement("button")
     del.textContent = "Delete"
-   "px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded w-full sm:w-auto"
+
+    del.className =
+      "px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded"
 
     del.onclick = () => {
       deletePalette(index)
@@ -44,10 +37,12 @@ row.className = "flex flex-wrap gap-3 sm:gap-4 mb-10 items-center"
     row.appendChild(del)
 
     container.appendChild(row)
-
   })
 
   page.appendChild(container)
+
+  // 👇 THIS FIXES THE WARNING
+  page.appendChild(footer())
 
   return page
 }
